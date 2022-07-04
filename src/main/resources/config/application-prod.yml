@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    cn.btrees.jhip01: INFO
+    cn.btrees: INFO
 
 management:
   metrics:

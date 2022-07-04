@@ -31,7 +31,7 @@ module.exports = async (env, options) => {
         app: './src/main/webapp/app/main.ts',
       },
       output: {
-        path: resolve('build/resources/main/static/'),
+        path: resolve('target/classes/static/'),
       },
       resolve: {
         extensions: ['.ts', '.js', '.vue', '.json'],
@@ -42,7 +42,7 @@ module.exports = async (env, options) => {
       },
       devServer: {
         static: {
-          directory: './build/resources/main/static/',
+          directory: './target/classes/static/',
         },
         port: 9060,
         proxy: [
@@ -57,7 +57,7 @@ module.exports = async (env, options) => {
       cache: {
         // 1. Set cache type to filesystem
         type: 'filesystem',
-        cacheDirectory: resolve('build/webpack'),
+        cacheDirectory: resolve('target/webpack'),
         buildDependencies: {
           // 2. Add your config as buildDependency to get cache invalidation on config change
           config: [
@@ -140,7 +140,6 @@ module.exports = async (env, options) => {
           output: {
             groupBy: [
               { pattern: './src/main/webapp/i18n/zh-cn/*.json', fileName: './i18n/zh-cn.json' },
-              { pattern: './src/main/webapp/i18n/en/*.json', fileName: './i18n/en.json' },
               // jhipster-needle-i18n-language-webpack - JHipster will add/remove languages in this array
             ],
           },

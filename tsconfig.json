@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "src/main/webapp/app",
-    "outDir": "build/out-tsc/dist",
+    "outDir": "target/out-tsc/dist",
     "target": "es5",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

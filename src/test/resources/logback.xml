@@ -4,7 +4,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="cn.btrees.jhip01" level="INFO"/>
+    <logger name="cn.btrees" level="INFO"/>
 
     <logger name="tech.jhipster" level="WARN"/>
 
