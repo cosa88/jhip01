@@ -21,5 +21,5 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-var-requires': 'off',
   },
-  ignorePatterns: ['build/'],
+  ignorePatterns: ['target/'],
 };

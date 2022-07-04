@@ -1,0 +1,38 @@
+{
+  "applications": ["jhip01"],
+  "changelogDate": "20220704064249",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customer",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "enName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fullName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Customer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "customerGroup",
+      "otherEntityRelationshipName": "customer",
+      "relationshipName": "customerGroup",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

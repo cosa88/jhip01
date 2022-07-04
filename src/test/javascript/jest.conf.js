@@ -9,7 +9,7 @@ module.exports = {
   roots: ['<rootDir>', `<rootDir>/${baseUrl}`, `<rootDir>/src/test/javascript/spec/app/`],
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  coverageDirectory: '<rootDir>/build/test-results/',
+  coverageDirectory: '<rootDir>/target/test-results/',
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/src/test/javascript/',
@@ -25,7 +25,7 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/main/webapp/app/$1',
     ...pathsToModuleNameMapper(paths, { prefix: `<rootDir>/${baseUrl}/` }),
   },
-  reporters: ['default', ['jest-junit', { outputDirectory: './build/test-results/', outputName: 'TESTS-results-jest.xml' }]],
+  reporters: ['default', ['jest-junit', { outputDirectory: './target/test-results/', outputName: 'TESTS-results-jest.xml' }]],
   testResultsProcessor: 'jest-sonar-reporter',
   testMatch: ['<rootDir>/src/test/javascript/spec/**/@(*.)@(spec.ts)'],
   snapshotSerializers: ['jest-serializer-vue'],

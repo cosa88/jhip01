@@ -1,0 +1,35 @@
+
+application {
+  config {
+    baseName jhip01,
+    applicationType monolith,
+    packageName cn.btrees,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework vue
+  }
+  entities *
+}
+
+entity Customer {
+	name String required
+    enName String required
+    fullName String required
+}
+
+entity CustomerGroup {
+	name String required
+    enName String required
+}
+
+entity Project {
+	name String required
+}
+
+relationship OneToMany {
+  Customer to CustomerGroup
+}
+
+relationship OneToOne {
+  Project{customerGroup} to CustomerGroup
+}

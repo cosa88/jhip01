@@ -1,0 +1,29 @@
+{
+  "applications": ["jhip01"],
+  "changelogDate": "20220704064251",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Project",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "customerGroup",
+      "otherEntityRelationshipName": "project",
+      "ownerSide": true,
+      "relationshipName": "customerGroup",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
